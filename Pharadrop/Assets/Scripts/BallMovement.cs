@@ -22,16 +22,16 @@ public class BallMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         
         BallMovement ball= other.gameObject.GetComponent<BallMovement>();
-        if(ball==null){
+        if(ball!=null){
+            if(!ball.isActive()){
+                isComponentActive= false; //deja de moverse una vez ha colisionado con otra bola
+            }
+        }
+        else{
             Vector2 aux= transform.up;
             Vector2 normal= other.gameObject.transform.right;
 
-            transform.up= normal - aux;
-        }
-        else{
-            if(ball.isActive()){
-                isComponentActive= false; //deja de moverse una vez ha colisionado con otra bola
-            }
+            transform.up= normal +  aux;
         }
         
     }
