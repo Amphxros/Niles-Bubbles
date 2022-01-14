@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
+    private Rigidbody2D rb;
     public float velocityScale=1.0f;
     public bool isComponentActive= true;
  
-    
+    private void Start() {
+        rb= this.gameObject.GetComponent<Rigidbody2D>();    
+    }
     public bool isActive(){
         return isComponentActive;
     }
@@ -21,18 +24,9 @@ public class BallMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         
-        BallMovement ball= other.gameObject.GetComponent<BallMovement>();
-        if(ball!=null){
-            if(!ball.isActive()){
-                isComponentActive= false; //deja de moverse una vez ha colisionado con otra bola
-            }
-        }
-        else{
-            Vector2 aux= transform.up;
-            Vector2 normal= other.gameObject.transform.right;
+      var speed= rb.velocity.magnitude;
 
-            transform.up= normal +  aux;
-        }
-        
+      var dir= Vector3.Reflect(transform.up,other.contacts[0].normal);
+      transform.up=dir;
     }
 }

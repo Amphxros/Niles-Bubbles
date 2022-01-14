@@ -24,8 +24,10 @@ public class PlayerController : MonoBehaviour
             
             transform.up= aux - new Vector2(scale* Time.deltaTime,0);
         }
-
-        mShootComponent.Shoot();
-
+           float input= Input.GetAxis("Fire1");
+               mShootComponent.Shoot();
+           if(input<0){
+               Debug.Log("Shoot");
+           }
     }
 }
