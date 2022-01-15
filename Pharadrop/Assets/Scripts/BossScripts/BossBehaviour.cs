@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class BossBehaviour : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,16 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void changeBalls(){
+
+    }
+    public void frezzeBalls(){
+
+    }
+
+    public void addBalls(){
+
     }
 }
