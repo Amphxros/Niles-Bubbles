@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float scale=1.0f;
+    public float scale=5.0f;
     ShootComponent mShootComponent;
 
     private void Start() {
@@ -24,10 +24,10 @@ public class PlayerController : MonoBehaviour
             
             transform.up= aux - new Vector2(scale* Time.deltaTime,0);
         }
-           float input= Input.GetAxis("Fire1");
-               mShootComponent.Shoot();
-           if(input<0){
-               Debug.Log("Shoot");
-           }
+           
+        if(Input.GetKeyDown(KeyCode.Space)){
+            mShootComponent.Shoot();
+        }
+
     }
 }
