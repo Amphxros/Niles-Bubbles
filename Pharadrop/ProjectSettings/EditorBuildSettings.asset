@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/PruebasSarah/Escenas/MenuPrincipal.unity
+    path: Assets/Escenas/MenuPrincipal.unity
     guid: 10369013411acbc45b775cf89c3a8aff
   - enabled: 1
-    path: Assets/PruebasSarah/Escenas/SelectorNiveles.unity
+    path: Assets/Escenas/SelectorNiveles.unity
     guid: 5686d140a24f0cc4bb4eff1671d0a6af
-  - enabled: 0
-    path: Assets/PruebasSarah/Escenas/NivelJefe.unity
-    guid: 971e4ba9ce9244e429f499a8ac731bf9
+  - enabled: 1
+    path: Assets/Escenas/BubbleScene.unity
+    guid: 08f09a6ebe56941e5a673450517e5d88
   m_configObjects: {}
