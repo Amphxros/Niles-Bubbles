@@ -15,6 +15,7 @@ public class GridReader
     int fils=0;
     int cols=0;
     
+
     public GridReader(){
         arg=-1;
         mLevelType_= TypeLevel.NONE;
@@ -22,6 +23,8 @@ public class GridReader
     }
     public TypeLevel getLevelType(){ return mLevelType_;}
 
+    public int getFils(){return fils;}
+    public int getCols(){return cols;}
     public string[] readFile(string filename){
         StreamReader read= new StreamReader(filename);
         string type="";
