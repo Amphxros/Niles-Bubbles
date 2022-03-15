@@ -12,7 +12,8 @@ public struct LevelData{
 public class FileManager : MonoBehaviour
 {
 
-    string [] namesArray;
+    public GameObject [] mPrefabs_; 
+    string [] dataArray;
     string mFilePath;
     public string filename;
 
@@ -61,11 +62,32 @@ public class FileManager : MonoBehaviour
                 data[fils]= line;
                 fils++;
                 Debug.Log(line);
-            }          
+            } 
+
+            dataArray= new string[fils];
+
+            for(int i=0 ;i<fils; i++){
+                dataArray[i]= data[i];
+            }
+
+
         }
         else{
             Debug.LogError("No existe fichero" + filename);
         }
     }
+
+    public void CreateLevel(){
+        if(dataArray.Length > 0){
+            for(int i=0; i<dataArray.Length; i++){
+                string[] line= dataArray[i].Split(' ');
+                for(int j=0;j<line.Length; j++){
+
+                }
+            }
+        }
+    }
+
+
 
 }
