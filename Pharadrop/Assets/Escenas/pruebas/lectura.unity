@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb677e7a010237d43b05df61fe5f958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mPrefabs_: []
   filename: LevelFiles/HP.txt
-  prefab: {fileID: 0}
 --- !u!4 &488741879
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488741877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.189395, y: 5.025514, z: -0.80592287}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
