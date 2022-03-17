@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488741879}
   - component: {fileID: 488741878}
+  - component: {fileID: 488741880}
   m_Layer: 0
   m_Name: file
   m_TagString: Untagged
@@ -152,7 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb677e7a010237d43b05df61fe5f958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mPrefabs_: []
+  mPrefabs_:
+  - {fileID: 1000013905868418, guid: 23ac72158a37f43aa859d6be80141c74, type: 3}
   filename: LevelFiles/HP.txt
 --- !u!4 &488741879
 Transform:
@@ -161,13 +163,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488741877}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &488741880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488741877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebbdf2717ff0d548b0db2eabbc01a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &522026574
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +234,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -245,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522026574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 5, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

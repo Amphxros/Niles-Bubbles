@@ -19,11 +19,9 @@ public class FileManager : MonoBehaviour
 
     LevelData mData;
     
-    void Start()
+    void Awake()
     {
         mFilePath=Application.dataPath +"/" + filename;
-
-        ReadFromFile();
     }
 
     public void ReadFromFile(){
@@ -82,7 +80,32 @@ public class FileManager : MonoBehaviour
             for(int i=0; i<dataArray.Length; i++){
                 string[] line= dataArray[i].Split(' ');
                 for(int j=0;j<line.Length; j++){
-
+                    switch(line[j]){
+                        case "A":
+                            Instantiate(mPrefabs_[0], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                        break;
+                        case "B":
+                        
+                            Instantiate(mPrefabs_[1], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                        break;
+                        case "C":
+                        
+                            Instantiate(mPrefabs_[2], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                        break;
+                        case "D":
+                        
+                            Instantiate(mPrefabs_[3], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                        break;
+                        case "E":
+                        
+                            Instantiate(mPrefabs_[4], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                        break;
+                        default:
+                        
+                            Instantiate(mPrefabs_[0], new Vector3(j -(j/2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                        break;
+                        
+                    }
                 }
             }
         }
