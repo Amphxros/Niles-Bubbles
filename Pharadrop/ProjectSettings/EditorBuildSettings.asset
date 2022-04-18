@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Game/config.unity
     guid: e5f8f3b98e1faef42a232e1e579bfd7d
+  - enabled: 1
+    path: Assets/Escenas/Game/BasketRoute/SelectLevelBasket.unity
+    guid: bbd9849fcab0f6441980df8d0ea13b2a
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisNeftisRoute/SelectLevelIsisNeftis.unity
+    guid: f9665c1a02018fd419272f27dc51f11f
+  - enabled: 1
+    path: Assets/Escenas/Game/AnubisRoute/SelectLevelAnubis.unity
+    guid: 81cb8d6bd0da94546b7b86d898692c0b
   m_configObjects: {}
