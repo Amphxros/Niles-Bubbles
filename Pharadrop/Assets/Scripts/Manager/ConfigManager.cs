@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ConfigManager : MonoBehaviour
 {
 
+    private Resolution currentResolution;
     private Resolution mResolution_;
     private int mBGMVolume_;
     private int mSFXVolume_;
@@ -25,6 +26,7 @@ public class ConfigManager : MonoBehaviour
 
     void Awake()
     {
+        currentResolution=Screen.currentResolution;
         mResIndex=0;
         mVolIndex=0;
         mSfxIndex=0;
@@ -105,6 +107,10 @@ public class ConfigManager : MonoBehaviour
     public void MoreSFXVolume(){
         
         print("More SFX volume");
+    }
+
+    public void cancelChanges(){
+        Screen.SetResolution(currentResolution.width, mResolution_.height, false);
     }
 
 

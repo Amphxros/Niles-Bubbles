@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Escenas/MenuPrincipal.unity
-    guid: 10369013411acbc45b775cf89c3a8aff
+    path: Assets/Escenas/Game/MenuPrincipal.unity
+    guid: 138c13a45296d774daaf92b6b36e7d58
   - enabled: 1
-    path: Assets/Escenas/SelectorNiveles.unity
-    guid: 5686d140a24f0cc4bb4eff1671d0a6af
+    path: Assets/Escenas/Game/SelectCharacter.unity
+    guid: b96ef8cec68daba488958f8253dd043f
   - enabled: 1
-    path: Assets/Escenas/BubbleScene.unity
-    guid: 08f09a6ebe56941e5a673450517e5d88
+    path: Assets/Escenas/pruebas/lectura.unity
+    guid: 8771bafa54ade2d4d989a71a69703689
+  - enabled: 1
+    path: Assets/Escenas/Game/config.unity
+    guid: e5f8f3b98e1faef42a232e1e579bfd7d
   m_configObjects: {}
