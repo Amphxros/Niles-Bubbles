@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Escenas/Game/init.unity
+    guid: 28bb2f8071407434c8ee2041bf06f7e1
+  - enabled: 1
     path: Assets/Escenas/Game/MenuPrincipal.unity
     guid: 138c13a45296d774daaf92b6b36e7d58
   - enabled: 1
@@ -29,4 +32,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Game/AnubisRoute/SelectLevelAnubis.unity
     guid: 81cb8d6bd0da94546b7b86d898692c0b
+  - enabled: 1
+    path: Assets/Escenas/Game/BasketRoute/BasketLevel0.unity
+    guid: e86fa8c3184883343b32977f0dec9e17
+  - enabled: 1
+    path: Assets/Escenas/Game/BasketRoute/BasketLevel1.unity
+    guid: 234e5e4f831a0d24ab6e10be5b7393bd
+  - enabled: 1
+    path: Assets/Escenas/Game/BasketRoute/BasketLevel2.unity
+    guid: 7c0256ae4dd2ca3498749edbfb518671
+  - enabled: 1
+    path: Assets/Escenas/Game/BasketRoute/BasketLevel3.unity
+    guid: 8e725ce31a5b2884f99ad4a7995859bb
+  - enabled: 1
+    path: Assets/Escenas/Game/BasketRoute/BasketLevel4.unity
+    guid: 121a3bb073f038f498431c777f48ac63
+  - enabled: 1
+    path: Assets/Escenas/Game/BasketRoute/BasketLevel5.unity
+    guid: 12dc9a8eccaef944f8a922432af3fb28
   m_configObjects: {}
