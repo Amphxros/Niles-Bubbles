@@ -5,15 +5,21 @@ using UnityEngine;
 
 public class InitManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    float time_;
     void Start()
     {
-        GameManager.getInstance().ChangeScene("MenuPrincipal");
+        GoToMainMenu();
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void FixedUpdate()
     {
         
+    }
+
+    void GoToMainMenu(){
+        GameManager.getInstance().ChangeScene("MenuPrincipal");
     }
 }
