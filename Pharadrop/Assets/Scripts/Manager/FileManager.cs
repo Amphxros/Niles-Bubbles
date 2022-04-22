@@ -13,6 +13,7 @@ public class FileManager : MonoBehaviour
 {
 
     public GameObject [] mPrefabs_; 
+    public Vector3 initPosition;
     string [] dataArray;
     string mFilePath;
     public string filename;
@@ -83,27 +84,27 @@ public class FileManager : MonoBehaviour
                     GameObject g;
                     switch(line[j]){
                         case "A":
-                            g= Instantiate(mPrefabs_[0], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                            g= Instantiate(mPrefabs_[0], initPosition + new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
                         break;
                         case "B":
                         
-                            g= Instantiate(mPrefabs_[1], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                            g= Instantiate(mPrefabs_[1],initPosition +  new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
                         break;
                         case "C":
                         
-                            g= Instantiate(mPrefabs_[2], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                            g= Instantiate(mPrefabs_[2], initPosition + new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
                         break;
                         case "D":
                         
-                            g= Instantiate(mPrefabs_[3], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                            g= Instantiate(mPrefabs_[3],initPosition +  new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
                         break;
                         case "E":
                         
-                            g= Instantiate(mPrefabs_[4], new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                            g= Instantiate(mPrefabs_[4], initPosition + new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
                         break;
                         default:
                         
-                            g= Instantiate(mPrefabs_[0], new Vector3(j -(j/2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
+                            g= Instantiate(mPrefabs_[0], initPosition + new Vector3(j -(j/2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
                         break;
                         
                     }
