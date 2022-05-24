@@ -25,6 +25,7 @@ public class TimeUI : MonoBehaviour
 
     }
 
+
     public void setMinScore(int score){
         minScore= score;
     }
@@ -47,6 +48,13 @@ public class TimeUI : MonoBehaviour
     
     }
 
+    public void addTime(int sec){
+        secs+=sec;
+        if(secs>60){
+            min+=secs%60;
+            secs-=60;
+        }
+    }
     bool isTimeOver(){
         return min<=0 && secs<=0;
     }

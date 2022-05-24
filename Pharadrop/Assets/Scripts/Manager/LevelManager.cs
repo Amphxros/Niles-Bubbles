@@ -20,6 +20,11 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     void Start()
     {
+        bossUI.SetActive(false);
+        timeUI.SetActive(false);
+        scoreUI.SetActive(false);
+        movesUI.SetActive(false);
+
         mManager_= GetComponent<FileManager>();
 
         if(mManager_!=null){
@@ -32,6 +37,24 @@ public class LevelManager : MonoBehaviour
 
     void setUI(){
         LevelData data= mManager_.getType();
+
+        switch (data.type){
+            case LevelType.TIME:
+            timeUI.SetActive(true);
+            TimeUI t= timeUI.GetComponent<TimeUI>();
+            t.setMinScore(data.args);
+            t.setTime(data.args1.ToString());
+
+            break;
+
+            case LevelType.MOVES:
+            movesUI.SetActive(true);
+
+            break;
+
+            case LevelType.HP:
+            break;
+        }
 
     }
 }

@@ -4,15 +4,49 @@ using UnityEngine;
 
 public class MovesUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   
+    int minScore;
+    int currScore_;
+
+
+    public Text currScoreText;
+    public Text minScoreText;
+    
+
+    public Text movesText;
+    int mMoves_;
+
+    void OnEnable()
     {
-        
+       setMoves(1);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void setCurrScore(int score){
+        currScore_=score;
+        currScoreText.text=score + " ";
     }
-}
+
+    public void setMoves(int moves){
+        mMoves_=moves;
+        movesText.text= moves.ToString();
+    }
+
+    public void OnShoot(){
+        mMoves_--;
+        movesText.text= moves.ToString();
+
+        if(mMoves_<=0){
+
+        }
+    }
+    void OnMovesZero(){
+        if(currScore_>=minScore){
+
+        }
+        else{
+            
+        }
+    }
+
+    }
