@@ -8,6 +8,7 @@ public enum LevelType{ HP, TIME, SCORE, MOVES}
 public struct LevelData{
     public LevelType type;
     public int args;
+    public int args1;
 }
 public class FileManager : MonoBehaviour
 {
@@ -18,7 +19,12 @@ public class FileManager : MonoBehaviour
     string mFilePath;
     public string filename;
 
+
     LevelData mData;
+
+    public LevelData getType(){
+        return mData;
+    }
     
     void Awake()
     {
@@ -53,6 +59,12 @@ public class FileManager : MonoBehaviour
             }
 
             mData.args= int.Parse(split[1]);
+            if(split.Length>=3){
+            mData.args1= int.Parse(split[2]);
+            }
+            else{
+                mData.args1=0;
+            }
 
             string [] data= new string[100];
             int fils= 0;
@@ -76,37 +88,14 @@ public class FileManager : MonoBehaviour
         }
     }
 
-    public void CreateLevel(){
+    public void build(){
         if(dataArray.Length > 0){
             for(int i=0; i<dataArray.Length; i++){
                 string[] line= dataArray[i].Split(' ');
                 for(int j=0;j<line.Length; j++){
                     GameObject g;
                     switch(line[j]){
-                        case "A":
-                            g= Instantiate(mPrefabs_[0], initPosition + new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
-                        break;
-                        case "B":
-                        
-                            g= Instantiate(mPrefabs_[1],initPosition +  new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
-                        break;
-                        case "C":
-                        
-                            g= Instantiate(mPrefabs_[2], initPosition + new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
-                        break;
-                        case "D":
-                        
-                            g= Instantiate(mPrefabs_[3],initPosition +  new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
-                        break;
-                        case "E":
-                        
-                            g= Instantiate(mPrefabs_[4], initPosition + new Vector3(j -(j%2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
-                        break;
-                        default:
-                        
-                            g= Instantiate(mPrefabs_[0], initPosition + new Vector3(j -(j/2)/2,i, 0), Quaternion.identity, this.gameObject.transform);
-                        break;
-                        
+                      
                     }
 
                     

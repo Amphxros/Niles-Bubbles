@@ -6,6 +6,14 @@ public class LevelManager : MonoBehaviour
 {
     FileManager mManager_;
 
+    public GameObject bossUI;
+    public GameObject timeUI;
+    public GameObject scoreUI;
+    public GameObject movesUI;
+
+
+    private int args_; //time, hp, score...
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -16,10 +24,14 @@ public class LevelManager : MonoBehaviour
 
         if(mManager_!=null){
             mManager_.ReadFromFile();
-            mManager_.CreateLevel();
         }
         else{
             Debug.Log("no leido no existente");
         }
+    }
+
+    void setUI(){
+        LevelData data= mManager_.getType();
+
     }
 }
