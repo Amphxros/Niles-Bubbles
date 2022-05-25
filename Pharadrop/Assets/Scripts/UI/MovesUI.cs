@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class MovesUI : MonoBehaviour
 {
    
@@ -14,12 +14,11 @@ public class MovesUI : MonoBehaviour
     
 
     public Text movesText;
-    int mMoves_;
+    int mMoves_=0;
 
     void OnEnable()
     {
-       setMoves(1);
-
+        Debug.Log("Moves initialized");
     }
 
     public void setCurrScore(int score){
@@ -27,14 +26,14 @@ public class MovesUI : MonoBehaviour
         currScoreText.text=score + " ";
     }
 
-    public void setMoves(int moves){
-        mMoves_=moves;
-        movesText.text= moves.ToString();
+    public void setMoves(string moves){
+        mMoves_=int.Parse(moves);
+        movesText.text= mMoves_ + " ";
     }
 
     public void OnShoot(){
         mMoves_--;
-        movesText.text= moves.ToString();
+        movesText.text= mMoves_.ToString();
 
         if(mMoves_<=0){
 
@@ -45,7 +44,7 @@ public class MovesUI : MonoBehaviour
 
         }
         else{
-            
+
         }
     }
 

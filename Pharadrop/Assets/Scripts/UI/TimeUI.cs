@@ -9,20 +9,20 @@ public class TimeUI : MonoBehaviour
    
     public Text timeText;
     
-    int min, secs;
+    int min;
+    float secs;
     int minScore;
     void OnEnable()
     {
-        
+        Debug.Log("Time initialized");
     }
 
     public void setTime(string time){
         string [] line= time.Split(':');
         min=int.Parse(line[0]);
-        secs= int.Parse(line[1]);
+        secs= (float)(int.Parse(line[1]));
 
-        timeText.text= min + " : "+secs;
-
+        timeText.text= time;
     }
 
 
@@ -32,16 +32,25 @@ public class TimeUI : MonoBehaviour
 
     void Update()
     {
-        secs-=(int)(Time.deltaTime);
+       if(!isTimeOver()){
+        secs-=Time.deltaTime;
         if(secs<0){
-           min--;
-           secs=60-secs; 
+            min--;
+            secs+=60;
         }
-         timeText.text= min + " : "+secs;
+        if(secs>10){
+            timeText.text=min+":"+ secs.ToString()[0]+""+secs.ToString()[1];
+        }
+        else{
+            timeText.text=min+":"+"0"+secs.ToString()[0];
+        }
+       }
+       else{
+           OnTimeOver();
+       }
 
-         if(isTimeOver()){
-             OnTimeOver();
-         }
+
+
     }
 
     void OnTimeOver(){
@@ -51,7 +60,7 @@ public class TimeUI : MonoBehaviour
     public void addTime(int sec){
         secs+=sec;
         if(secs>60){
-            min+=secs%60;
+            min += (int)(secs%60);
             secs-=60;
         }
     }

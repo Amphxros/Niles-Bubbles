@@ -366,7 +366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &400276730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -587,7 +587,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -5.591, y: -14.9092}
-  m_SizeDelta: {x: 275.5469, y: 119.4555}
+  m_SizeDelta: {x: 500, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505839961
 MonoBehaviour:
@@ -643,6 +643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660426402}
   - component: {fileID: 660426403}
+  - component: {fileID: 660426404}
   m_Layer: 5
   m_Name: filemanager
   m_TagString: Untagged
@@ -686,7 +687,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mPrefabs_: []
   initPosition: {x: 0, y: 0, z: 0}
-  filename: 
+  filename: LevelFiles/time_example.txt
+--- !u!114 &660426404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660426401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebbdf2717ff0d548b0db2eabbc01a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossUI: {fileID: 400276729}
+  timeUI: {fileID: 1705666781}
+  scoreUI: {fileID: 1655266204}
+  movesUI: {fileID: 1655266204}
 --- !u!1 &664795152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1655266205
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1101,6 +1118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4761c9aab1200104ab10037ea0254de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currScoreText: {fileID: 0}
+  minScoreText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &1686475312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1705666782
 RectTransform:
   m_ObjectHideFlags: 0

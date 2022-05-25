@@ -14,7 +14,7 @@ public class ScoreUI : MonoBehaviour
 
     void OnEnable()
     {
-        
+        Debug.Log("Score initialized");
     }
 
     public void setCurrScore(int score){

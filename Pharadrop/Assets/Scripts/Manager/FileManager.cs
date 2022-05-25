@@ -8,7 +8,7 @@ public enum LevelType{ HP, TIME, SCORE, MOVES}
 public struct LevelData{
     public LevelType type;
     public int args;
-    public int args1;
+    public string args1;
 }
 public class FileManager : MonoBehaviour
 {
@@ -60,10 +60,10 @@ public class FileManager : MonoBehaviour
 
             mData.args= int.Parse(split[1]);
             if(split.Length>=3){
-            mData.args1= int.Parse(split[2]);
+            mData.args1= split[2];
             }
             else{
-                mData.args1=0;
+                mData.args1=null;
             }
 
             string [] data= new string[100];

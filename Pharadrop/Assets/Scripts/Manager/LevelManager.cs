@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
 
         if(mManager_!=null){
             mManager_.ReadFromFile();
+            setUI();
         }
         else{
             Debug.Log("no leido no existente");
