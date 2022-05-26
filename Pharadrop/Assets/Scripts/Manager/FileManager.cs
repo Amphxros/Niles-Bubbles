@@ -66,20 +66,20 @@ public class FileManager : MonoBehaviour
                 mData.args1=null;
             }
 
-            string [] data= new string[100];
-            int fils= 0;
-            while(fils<data.Length && !read.EndOfStream){
-                line= read.ReadLine();
-                data[fils]= line;
-                fils++;
-                Debug.Log(line);
-            } 
+            // string [] data= new string[100];
+            // int fils= 0;
+            // while(fils<data.Length && !read.EndOfStream){
+            //     line= read.ReadLine();
+            //     data[fils]= line;
+            //     fils++;
+            //     Debug.Log(line);
+            // } 
 
-            dataArray= new string[fils];
+            // dataArray= new string[fils];
 
-            for(int i=0 ;i<fils; i++){
-                dataArray[i]= data[i];
-            }
+            // for(int i=0 ;i<fils; i++){
+            //     dataArray[i]= data[i];
+            // }
 
 
         }

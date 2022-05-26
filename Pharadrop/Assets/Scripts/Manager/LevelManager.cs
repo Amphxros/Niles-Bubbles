@@ -50,6 +50,9 @@ public class LevelManager : MonoBehaviour
 
             case LevelType.MOVES:
             movesUI.SetActive(true);
+            MovesUI m= movesUI.GetComponent<MovesUI>();
+            m.setMinScore(data.args);
+            m.setMoves(data.args1);
 
             break;
 

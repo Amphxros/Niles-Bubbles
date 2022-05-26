@@ -26,6 +26,10 @@ public class MovesUI : MonoBehaviour
         currScoreText.text=score + " ";
     }
 
+    public void setMinScore(int score){
+        minScore=score;
+        minScoreText.text= score.ToString();
+    }
     public void setMoves(string moves){
         mMoves_=int.Parse(moves);
         movesText.text= mMoves_ + " ";
