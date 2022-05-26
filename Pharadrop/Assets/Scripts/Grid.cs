@@ -28,7 +28,7 @@ public class Grid : MonoBehaviour
 
     public void attachBall(GameObject g,int i, int j){
         balls[i,j]=g;
-        balls[i,j].transform.position= new Vector3(initPosition.x + i + i%2*(i/2), initPosition.y+j, 0);
+        balls[i,j].transform.position= new Vector3(initPosition.x + i + i%2*(0.5f), initPosition.y+j, 0);
         BallMovement b= g.GetComponent<BallMovement>();
         b.Desactivate();
     }
