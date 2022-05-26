@@ -5,6 +5,8 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     public float speed;
+
+    bool activated=false;
     void Start()
     {
         
@@ -13,7 +15,16 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(activated)
           transform.Translate(0, speed * Time.deltaTime, 0);
+    }
+
+    public void Activate(){
+        activated=true;
+        this.transform.parent=null;
+    }
+    public void Desactivate(){
+        activated=false;
     }
 
     void deleteComponent(){
