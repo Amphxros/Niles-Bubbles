@@ -28,7 +28,6 @@ public class LevelManager : MonoBehaviour
         mManager_= GetComponent<FileManager>();
 
         if(mManager_!=null){
-            mManager_.ReadFromFile();
             setUI();
         }
         else{
@@ -37,6 +36,7 @@ public class LevelManager : MonoBehaviour
     }
 
     void setUI(){
+        mManager_.ReadFromFile();
         LevelData data= mManager_.getType();
 
         switch (data.type){
@@ -59,7 +59,6 @@ public class LevelManager : MonoBehaviour
             case LevelType.BOSS:
             bossUI.SetActive(true);
             BossUI b= bossUI.GetComponent<BossUI>();
-            
             b.setPlayer(data.args1);
             b.setBoss(data.args2);
 

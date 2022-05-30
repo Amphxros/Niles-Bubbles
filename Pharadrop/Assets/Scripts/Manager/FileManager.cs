@@ -44,40 +44,38 @@ public class FileManager : MonoBehaviour
             switch (split[0])
             {
                 case "BOSS":
-                mData.type= LevelType.BOSS;
+                 mData.type= LevelType.BOSS;
+                 mData.args1=split[1];
+                 mData.args2= split[2];
+
+                 mData.args3= int.Parse(split[3]);
+                 mData.args4= int.Parse(split[4]);
+
+                 print(mData.args1 + " " + mData.args2);
+
                 break;
 
                 case "TIME":
-                mData.type= LevelType.TIME;    
+                mData.type= LevelType.TIME; 
+                mData.args= int.Parse(split[1]);
+                mData.args1=split[2];
+
+
                 break;
                 
                 case "SCORE":
                 mData.type= LevelType.SCORE;
+                mData.args= int.Parse(split[1]);
                 break;
                 
                 case "MOVES":
                 mData.type=LevelType.MOVES;
+                mData.args= int.Parse(split[1]);
+                mData.args1= split[2];
                 break;
                
             }
-
-            mData.args= int.Parse(split[1]);
-            if(split.Length>=3){
-            mData.args1= split[2];
-                if(split.Length>=4){
-                    mData.args2= split[2];
-                    if(split.Length>=5){
-                        mData.args3=int.Parse(split[3]);
-                        if(split.Length>=6){
-
-                        }
-                    }   
-                }
-            }
-            else{
-                mData.args1=null;
-            }
-
+            
             // string [] data= new string[100];
             // int fils= 0;
             // while(fils<data.Length && !read.EndOfStream){

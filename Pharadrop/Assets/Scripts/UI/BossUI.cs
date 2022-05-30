@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BossUI : MonoBehaviour
 {
-    int playerHP;
-    int bossHP;
+    int playerHP=0;
+    int bossHP=0;
 
     public Transform playerPanel;
     public Transform bossPanel;
 
+    public Text playername;
+    public Text bossName;
+
+
 
     public GameObject [] bossesArt;
-    public string [] bossesName;
 
     void OnEnable()
     {
@@ -20,22 +23,50 @@ public class BossUI : MonoBehaviour
     }
     public void setPlayer(string name){
       int i= 0;
-      while(i<bossesName.Length && bossesName[i]!=name)
-        i++;
+       switch(name){
+           case "Bastet":
+           i=0;
+           break;
+           case "Isis":
+           i=1;
+           break;
 
-        if(i<bossesName.Length){
-            Instantiate(bossesArt[i],playerPanel.position,playerPanel.rotation);
-        }
+           case "Neftis":
+           i=2;
+           break;
+
+           
+       }
+        print("player" +i);
+       Instantiate(bossesArt[i],playerPanel.transform);
+        
     }
 
     public void setBoss(string name){
       int i= 0;
-      while(i<bossesName.Length && bossesName[i]!=name)
-        i++;
+       
+       switch(name){
+        case "Bastet":
+           i=0;
+           break;
+           
+        case "Isis":
+           i=1;
+           break;
 
-        if(i<bossesName.Length){
-            Instantiate(bossesArt[i], bossPanel.position, bossPanel.rotation);
-        }
+        case "Neftis":
+           i=2;
+           break;
+
+            default:
+            i=0;
+            break;
+
+       }
+       print("boss" +i);
+
+       Instantiate(bossesArt[i], bossPanel.transform);
+        
     }
 
 
