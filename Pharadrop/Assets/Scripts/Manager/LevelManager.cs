@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour
             timeUI.SetActive(true);
             TimeUI t= timeUI.GetComponent<TimeUI>();
             t.setMinScore(data.args);
-            t.setTime(data.args1.ToString());
+            t.setTime(data.args1);
 
             break;
 
@@ -56,7 +56,18 @@ public class LevelManager : MonoBehaviour
 
             break;
 
-            case LevelType.HP:
+            case LevelType.BOSS:
+            bossUI.SetActive(true);
+            BossUI b= bossUI.GetComponent<BossUI>();
+            
+            b.setPlayer(data.args1);
+            b.setBoss(data.args2);
+
+            b.SetPlayerHP(data.args3);
+            b.SetBossHP(data.args4);
+
+
+
             break;
         }
 

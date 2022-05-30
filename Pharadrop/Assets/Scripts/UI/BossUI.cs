@@ -16,7 +16,7 @@ public class BossUI : MonoBehaviour
 
     void OnEnable()
     {
-        
+        Debug.Log("Boss initialized");
     }
     public void setPlayer(string name){
       int i= 0;
@@ -44,7 +44,7 @@ public class BossUI : MonoBehaviour
         //cambiar la barra de vida
     }
 
-    public void SetBoss(int hp){
+    public void SetBossHP(int hp){
         bossHP=hp;
          //cambiar la barra de vida
     }

@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public enum LevelType{ HP, TIME, SCORE, MOVES}
+public enum LevelType{ BOSS, TIME, SCORE, MOVES}
 
 public struct LevelData{
     public LevelType type;
     public int args;
     public string args1;
+    public string args2;
+    public int args3;
+    public int args4;
 }
 public class FileManager : MonoBehaviour
 {
@@ -40,8 +43,8 @@ public class FileManager : MonoBehaviour
 
             switch (split[0])
             {
-                case "HP":
-                mData.type= LevelType.HP;
+                case "BOSS":
+                mData.type= LevelType.BOSS;
                 break;
 
                 case "TIME":
@@ -61,6 +64,15 @@ public class FileManager : MonoBehaviour
             mData.args= int.Parse(split[1]);
             if(split.Length>=3){
             mData.args1= split[2];
+                if(split.Length>=4){
+                    mData.args2= split[2];
+                    if(split.Length>=5){
+                        mData.args3=int.Parse(split[3]);
+                        if(split.Length>=6){
+
+                        }
+                    }   
+                }
             }
             else{
                 mData.args1=null;
@@ -88,21 +100,6 @@ public class FileManager : MonoBehaviour
         }
     }
 
-    public void build(){
-        if(dataArray.Length > 0){
-            for(int i=0; i<dataArray.Length; i++){
-                string[] line= dataArray[i].Split(' ');
-                for(int j=0;j<line.Length; j++){
-                    GameObject g;
-                    switch(line[j]){
-                      
-                    }
-
-                    
-                }
-            }
-        }
-    }
 
 
 
