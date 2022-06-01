@@ -34,6 +34,9 @@ public class FileManager : MonoBehaviour
         mFilePath=Application.dataPath +"/" + filename;
     }
 
+    public string[] getData(){
+        return dataArray;
+    }
     public void ReadFromFile(){
        
         StreamReader read= new StreamReader(mFilePath);
@@ -76,20 +79,19 @@ public class FileManager : MonoBehaviour
                
             }
             
-            // string [] data= new string[100];
-            // int fils= 0;
-            // while(fils<data.Length && !read.EndOfStream){
-            //     line= read.ReadLine();
-            //     data[fils]= line;
-            //     fils++;
-            //     Debug.Log(line);
-            // } 
-
-            // dataArray= new string[fils];
-
-            // for(int i=0 ;i<fils; i++){
-            //     dataArray[i]= data[i];
-            // }
+            string [] data= new string[100];
+            int fils= 0;
+            while(fils<data.Length && !read.EndOfStream){
+                line= read.ReadLine();
+                data[fils]= line;
+                fils++;
+                Debug.Log(line);
+            
+            }
+            dataArray= new string[fils];
+            for(int i=0 ;i<fils; i++){
+                dataArray[i]= data[i];
+            }
 
 
         }

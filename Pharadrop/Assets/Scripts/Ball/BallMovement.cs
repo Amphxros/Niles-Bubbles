@@ -7,6 +7,7 @@ public class BallMovement : MonoBehaviour
     public float speed;
 
     bool activated=false;
+
     void Start()
     {
         
@@ -23,6 +24,7 @@ public class BallMovement : MonoBehaviour
         activated=true;
         this.transform.parent=null;
     }
+    public bool isActive(){return activated;}
     public void Desactivate(){
         activated=false;
     }

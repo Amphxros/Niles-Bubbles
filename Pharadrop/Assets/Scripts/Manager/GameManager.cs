@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private bool isLevelUnlocked(string route, int level){
+    public bool isLevelUnlocked (string route, int level){
          switch(route){
             case "Bastet":
            return bastetRouteLevels[level];

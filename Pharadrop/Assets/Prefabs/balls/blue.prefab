@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2762307297878347291}
   - component: {fileID: -7925385354946349407}
   - component: {fileID: -563319873360953921}
+  - component: {fileID: -6337276420675903364}
+  - component: {fileID: 1610717650927587601}
   m_Layer: 6
   m_Name: blue
   m_TagString: ball
@@ -159,3 +161,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &-6337276420675903364
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199690006141685370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.7
+--- !u!114 &1610717650927587601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199690006141685370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b803e2912c1f9fe40b8e6fa7244074c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

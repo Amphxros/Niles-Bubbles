@@ -9,6 +9,11 @@ public class TimeUI : MonoBehaviour
    
     public Text timeText;
     
+    
+    public GameObject gameWin;
+    public GameObject gameLose;
+
+    public GameObject gamePause;
     int min;
     float secs;
     int minScore;

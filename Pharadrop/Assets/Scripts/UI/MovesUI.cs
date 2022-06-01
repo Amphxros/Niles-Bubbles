@@ -11,10 +11,14 @@ public class MovesUI : MonoBehaviour
 
     public Text currScoreText;
     public Text minScoreText;
-    
-
     public Text movesText;
     int mMoves_=0;
+
+
+    public GameObject gameWin;
+    public GameObject gameLose;
+
+   
 
     void OnEnable()
     {

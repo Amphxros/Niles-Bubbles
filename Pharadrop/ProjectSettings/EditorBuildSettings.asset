@@ -17,23 +17,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Game/SelectCharacter.unity
     guid: b96ef8cec68daba488958f8253dd043f
-  - enabled: 1
-    path: Assets/Escenas/pruebas/lectura.unity
-    guid: 8771bafa54ade2d4d989a71a69703689
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Escenas/Game/config.unity
     guid: e5f8f3b98e1faef42a232e1e579bfd7d
   - enabled: 1
-    path: Assets/Escenas/pruebas/GameScene.unity
-    guid: 589456d1007273f4d9dc669f918be856
-  - enabled: 1
     path: Assets/Escenas/Game/BastetRoute/SelectLevelBastet.unity
     guid: bbd9849fcab0f6441980df8d0ea13b2a
   - enabled: 1
-    path: Assets/Escenas/Game/IsisNeftisRoute/SelectLevelIsisNeftis.unity
+    path: Assets/Escenas/Game/IsisRoute/SelectLevelIsis.unity
     guid: f9665c1a02018fd419272f27dc51f11f
   - enabled: 1
-    path: Assets/Escenas/Game/AnubisRoute/SelectLevelAnubis.unity
+    path: Assets/Escenas/Game/NeftisRoute/SelectLevelNeftis.unity
     guid: 81cb8d6bd0da94546b7b86d898692c0b
   - enabled: 1
     path: Assets/Escenas/Game/BastetRoute/BastetLevel0.unity
@@ -53,4 +50,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Game/BastetRoute/BastetLevel5.unity
     guid: 12dc9a8eccaef944f8a922432af3fb28
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel0.unity
+    guid: aa3aa0b6f019ccd40bbab2bcd8f29376
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel1.unity
+    guid: 551b71a73f53c1742807e6e58ca8d6da
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel2.unity
+    guid: 22ef15296919c03469b88fc7d3cf8c06
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel3.unity
+    guid: 640fbb13cc4fb3f41a1c983b909c0b6c
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel4.unity
+    guid: 06428456479a2c54a947245ac52a201a
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel5.unity
+    guid: a7593298ff666b845a8b3302ad33adf7
   m_configObjects: {}

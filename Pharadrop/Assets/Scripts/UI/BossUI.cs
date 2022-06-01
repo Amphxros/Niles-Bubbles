@@ -25,19 +25,23 @@ public class BossUI : MonoBehaviour
       int i= 0;
        switch(name){
            case "Bastet":
+           playername.text= "Bastet";
            i=0;
            break;
-           case "Isis":
+         
+           case "Isis":     
+           playername.text= "Isis";
            i=1;
            break;
 
            case "Neftis":
+           playername.text= "Neftis";
            i=2;
            break;
 
            
        }
-        print("player" +i);
+      
        Instantiate(bossesArt[i],playerPanel.transform);
         
     }
@@ -48,23 +52,24 @@ public class BossUI : MonoBehaviour
        switch(name){
         case "Bastet":
            i=0;
+           bossName.text="Bastet";
            break;
            
         case "Isis":
+           bossName.text="Isis";
            i=1;
            break;
 
         case "Neftis":
+           bossName.text="Neftis";
            i=2;
            break;
 
-            default:
+        default:
             i=0;
-            break;
+         break;
 
        }
-       print("boss" +i);
-
        Instantiate(bossesArt[i], bossPanel.transform);
         
     }

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    Vector3 initPosition= new Vector3();
-    public GameObject[,] balls;
+    Vector3 initPosition= new Vector3(-5,3,0);
+    private GameObject[,] balls;
     public int ROWS=5;
     public int COLS=5;
 
 
+    public Vector3 init(){return initPosition;}
     void Start()
     {
         balls= new GameObject[ROWS, COLS];
@@ -34,7 +35,9 @@ public class Grid : MonoBehaviour
     }
 
     public void detachBall(int i, int j){
-        Rigidbody2D rb= balls[i,j].GetComponent<Rigidbody2D>();
+       GameObject g= balls[i,j];
+       Destroy(g);
+       balls[i,j]=null;
 
 
     }
