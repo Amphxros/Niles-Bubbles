@@ -12,8 +12,8 @@ public class SetCharacterToThisPosition : MonoBehaviour
 
    void OnMouseDown()
    {
-       if(GameManager.getInstance().isLevelUnlocked(charactername,id)){
-           character.transform.position=this.transform.position;
-       }
+      
+        character.transform.position=this.transform.position;
+       
    }
 }

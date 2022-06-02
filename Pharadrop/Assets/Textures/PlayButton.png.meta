@@ -121,12 +121,12 @@ TextureImporter:
       name: PlayButton_0
       rect:
         serializedVersion: 2
-        x: 528
-        y: 104
-        width: 817
-        height: 865
+        x: 600
+        y: 123
+        width: 686
+        height: 794
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
