@@ -27,7 +27,7 @@ public class Grid : MonoBehaviour
 
         string [] level= manager.getData();
         ROWS= 20;
-        COLS= level[0].Split(' ').Length;
+        COLS= 20;
         grid= new GameObject[COLS,ROWS];
 
         for(int i=0; i<COLS; i++){
@@ -44,7 +44,7 @@ public class Grid : MonoBehaviour
             for(int j=0; j<line.Length; j++){
                 
                 GameObject g= null;
-                float x= (float)(j + 0.5f*j*(i%2));
+                float x=-1;
 
                 if(i%2==0){
                     x=j;
@@ -102,23 +102,19 @@ public class Grid : MonoBehaviour
 
     public void attachBall(GameObject g,int i, int j){
         
-        g.transform.parent= this.gameObject.transform;
-        float x=-1;
-        if(i%2==0){
-            x=j;
-        }
-        else{
-            x= j +0.5f;
-        }
-
-         print(i + " "+ j);
-        grid[i,j]=g;
+        print(i + " "+ j);
+        g.transform.parent= transform;
+        g.transform.position= new Vector3(-4,4,0);
         BallID b= g.GetComponent<BallID>();
         b.indX=i;
         b.indY=j;
-
-       g.transform.position= this.transform.position + new Vector3(x, j, 0);
-
+        if(i%2==0){
+            g.transform.position+=new Vector3(j,-i,0);
+        }
+        else{
+             g.transform.position+=new Vector3(j + 0.5f,-i,0);
+        }
+      
     }
 
     public void detachBall(int i, int j){
