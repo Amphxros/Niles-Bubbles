@@ -25,8 +25,39 @@ public class AttachToGridOnTrigger : MonoBehaviour
         BallMovement m= other.gameObject.GetComponent<BallMovement>();
         if(att==null && m!=null){
             m.Desactivate();
+            BallID bA= this.gameObject.GetComponent<BallID>();
+            BallID bb= other.gameObject.GetComponent<BallID>();
+
+           int j = bA.indX;
+            int i=bA.indY;
+
             AttachToGridOnTrigger a= other.gameObject.AddComponent<AttachToGridOnTrigger>();
             a.setGrid(g);
+            float x= this.transform.position.x - other.transform.position.x;
+            float y= this.transform.position.y - other.transform.position.y;
+
+            //position to attach to
+
+            if(j>=1){
+                
+                if(y>0){
+                    g.attachBall(other.gameObject,i,j+1);
+
+                }
+                else{
+                    g.attachBall(other.gameObject,i,j-1);
+                }
+
+
+            }
+
+            else{
+                Destroy(other.gameObject);
+            }
+
+
+            
+
         }
     }
 }

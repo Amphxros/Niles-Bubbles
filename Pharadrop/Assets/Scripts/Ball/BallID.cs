@@ -12,4 +12,7 @@ public enum ID{
 public class BallID : MonoBehaviour
 {
     public ID mID_;
+
+    public int indX=-1;
+    public int indY=-1;
 }

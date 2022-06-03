@@ -57,34 +57,38 @@ public class Grid : MonoBehaviour
                 switch(line[j]){
                     case "A":
                
-                        g= Instantiate(balls[0], transform.position + new Vector3(x,i,0), Quaternion.identity, this.transform) as GameObject;
+                        g= Instantiate(balls[0], transform.position + new Vector3(x,-i,0), Quaternion.identity, this.transform) as GameObject;
                     break;
                 
                     case "B":
                     
-                        g= Instantiate(balls[1], transform.position + new Vector3(x,i,0), Quaternion.identity, this.transform) as GameObject;
+                        g= Instantiate(balls[1], transform.position + new Vector3(x,-i,0), Quaternion.identity, this.transform) as GameObject;
                     break;
                     case "C":
-                        g= Instantiate(balls[2],  transform.position + new Vector3(x,i,0), Quaternion.identity, this.transform) as GameObject;
+                        g= Instantiate(balls[2],  transform.position + new Vector3(x,-i,0), Quaternion.identity, this.transform) as GameObject;
                     break;
                 
                     case "D":
                     
-                        g= Instantiate(balls[3],  transform.position + new Vector3(x,i,0), Quaternion.identity, this.transform) as GameObject;
+                        g= Instantiate(balls[3],  transform.position + new Vector3(x,-i,0), Quaternion.identity, this.transform) as GameObject;
                     break;
                     case "E":
-                        g= Instantiate(balls[4],  transform.position + new Vector3(x,i,0), Quaternion.identity, this.transform) as GameObject;
+                        g= Instantiate(balls[4],  transform.position + new Vector3(x,-i,0), Quaternion.identity, this.transform) as GameObject;
                     break;
                 
                     case "F":
-                        g= Instantiate(balls[5],  transform.position + new Vector3(x,i,0), Quaternion.identity, this.transform) as GameObject;
+                        g= Instantiate(balls[5],  transform.position + new Vector3(x,-i,0), Quaternion.identity, this.transform) as GameObject;
                     break;
                 }
 
                 AttachToGridOnTrigger a= g.AddComponent<AttachToGridOnTrigger>();
                 a.setGrid(this);
+                
+                BallID b= g.GetComponent<BallID>();
 
                 grid[i,j]=g;
+                b.indX=i;
+                b.indY=j;
 
                 g=null;
             }
@@ -97,10 +101,24 @@ public class Grid : MonoBehaviour
     }
 
     public void attachBall(GameObject g,int i, int j){
-       grid[i,j]=g;
-       grid[i,j].transform.position= new Vector3(initPosition.x + i + i%2*(0.5f), initPosition.y+j, 0);
-        BallMovement b= g.GetComponent<BallMovement>();
-        b.Desactivate();
+        
+        g.transform.parent= this.gameObject.transform;
+        float x=-1;
+        if(i%2==0){
+            x=j;
+        }
+        else{
+            x= j +0.5f;
+        }
+
+         print(i + " "+ j);
+        grid[i,j]=g;
+        BallID b= g.GetComponent<BallID>();
+        b.indX=i;
+        b.indY=j;
+
+       g.transform.position= this.transform.position + new Vector3(x, j, 0);
+
     }
 
     public void detachBall(int i, int j){
