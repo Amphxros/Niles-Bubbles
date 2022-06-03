@@ -30,6 +30,11 @@ public class CharacterSelector : MonoBehaviour
     }
     public void BeforeCharacter(){
         characters[ind].SetActive(false);
+        
+        if(ind==0){
+            ind=characters.Length;
+        }
+        
         ind= (ind-1)%characters.Length;
         characters[ind].SetActive(true);
     
