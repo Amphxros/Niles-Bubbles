@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
+
+    List<GameObject> visited;
+
+
+
     Vector3 initPosition;
     public GameObject[] balls;
     private GameObject[,] grid;
-    public int ROWS=5;
-    public int COLS=5;
+    private int ROWS=5;
+    private int COLS=5;
     public Vector3 init(){return initPosition;}
 
     public FileManager manager;
@@ -23,11 +28,11 @@ public class Grid : MonoBehaviour
         string [] level= manager.getData();
         ROWS= 20;
         COLS= level[0].Split(' ').Length;
-        grid= new GameObject[ROWS, COLS];
+        grid= new GameObject[COLS,ROWS];
 
-        for(int i=0; i<ROWS; i++){
+        for(int i=0; i<COLS; i++){
 
-            for(int j=0; j<COLS;j++){
+            for(int j=0; j<ROWS;j++){
                 grid[i,j]=null;
             }
         }
@@ -42,7 +47,7 @@ public class Grid : MonoBehaviour
                 float x= (float)(j + 0.5f*j*(i%2));
 
                 if(i%2==0){
-                    x=j +1.0f;
+                    x=j;
                 }
                 else{
                     x= j +0.5f;
@@ -76,6 +81,9 @@ public class Grid : MonoBehaviour
                     break;
                 }
 
+                AttachToGridOnTrigger a= g.AddComponent<AttachToGridOnTrigger>();
+                a.setGrid(this);
+
                 grid[i,j]=g;
 
                 g=null;
@@ -103,11 +111,41 @@ public class Grid : MonoBehaviour
 
     }
 
-    // public List<GameObject> getNeightbours(int i, int j){
-    //  List<GameObject> res= new List<GameObject>();
-
-    //  return res;
-    // }
+   public List<GameObject> getNeightbours(int i, int j){
+       List<GameObject> result= new List<GameObject>();
+       if(i==0){
+           if(j==0){
+               result.Add(grid[i+1,j]);
+               result.Add(grid[i,j-1]);
+           }
+           else{
+               result.Add(grid[i+1,j]);
+               result.Add(grid[i,j-1]);
+               result.Add(grid[i-1,j]);
+               result.Add(grid[i-1,j-1]);
+           }
+       }
+       else if(i==grid.GetLength(0)){
+           if(j==0){
+               result.Add(grid[i-1,j]);
+               result.Add(grid[i,j-1]);
+           }
+           else{
+                result.Add(grid[i+1,j]);
+                result.Add(grid[i,j-1]);
+                result.Add(grid[i-1,j-1]);
+           }
+       }
+       else{
+               result.Add(grid[i+1,j]);
+               result.Add(grid[i-1,j]);
+               result.Add(grid[i,j-1]);
+               result.Add(grid[i,j+1]);
+               result.Add(grid[i+1,j-1]);
+               result.Add(grid[i+1,j+1]);                
+       }
+       return result;
+   }
 
     
 }

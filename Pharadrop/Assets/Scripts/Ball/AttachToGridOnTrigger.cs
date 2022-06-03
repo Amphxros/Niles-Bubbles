@@ -9,8 +9,6 @@ public class AttachToGridOnTrigger : MonoBehaviour
     BallMovement ball;
     void Start()
     {
-        g= transform.parent.gameObject.GetComponent<Grid>();
-    
     ball= GetComponent<BallMovement>();
     }
 
@@ -25,6 +23,10 @@ public class AttachToGridOnTrigger : MonoBehaviour
     {
         AttachToGridOnTrigger att= other.gameObject.GetComponent<AttachToGridOnTrigger>();
         BallMovement m= other.gameObject.GetComponent<BallMovement>();
-    
+        if(att==null && m!=null){
+            m.Desactivate();
+            AttachToGridOnTrigger a= other.gameObject.AddComponent<AttachToGridOnTrigger>();
+            a.setGrid(g);
+        }
     }
 }

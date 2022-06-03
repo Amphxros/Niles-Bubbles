@@ -1395,7 +1395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596023702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2063,7 +2063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905662345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2175,8 +2175,6 @@ MonoBehaviour:
   - {fileID: 2769305506231870220, guid: 474a402938286a84ba08c88c85fd939c, type: 3}
   - {fileID: 8816327178719790394, guid: 6a40af51e4b905e48a06f32696de3664, type: 3}
   - {fileID: 2199690006141685370, guid: 80297fc789016854fb598810599da79b, type: 3}
-  ROWS: 5
-  COLS: 5
   manager: {fileID: 660426403}
 --- !u!1 &1143242205
 GameObject:
