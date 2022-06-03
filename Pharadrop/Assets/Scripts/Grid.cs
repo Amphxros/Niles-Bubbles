@@ -5,21 +5,18 @@ using UnityEngine;
 public class Grid : MonoBehaviour
 {
 
-    List<GameObject> visited;
-
-
-
+    List <GameObject> currGrid;
+    
     Vector3 initPosition;
     public GameObject[] balls;
     private GameObject[,] grid;
     private int ROWS=5;
     private int COLS=5;
-    public Vector3 init(){return initPosition;}
-
+    
     public FileManager manager;
     void Start()
     {
-        initPosition= new Vector3(0,0,0);
+        
        build();
     }
 
@@ -100,6 +97,10 @@ public class Grid : MonoBehaviour
         
     }
 
+    public void checkDestroyable(GameObject g){
+
+    }
+
     public void attachBall(GameObject g,int i, int j){
         
         print(i + " "+ j);
@@ -114,6 +115,8 @@ public class Grid : MonoBehaviour
         else{
              g.transform.position+=new Vector3(j + 0.5f,-i,0);
         }
+
+        grid[i,j]=g;
       
     }
 
