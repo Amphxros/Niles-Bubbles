@@ -36,10 +36,22 @@ public class AttachToGridOnTrigger : MonoBehaviour
             
             //position to attach to
             if(this.transform.position.x - other.transform.position.x>0){
-                g.attachBall(other.gameObject,i+1,j);
+                if(this.transform.position.y - other.transform.position.y>0){
+                    g.attachBall(other.gameObject,i+1,j);
+                }
+                else{
+                    g.attachBall(other.gameObject,i-1,j);
+                }
             }
             else{
-                g.attachBall(other.gameObject,i+1,j+1);
+
+                if(this.transform.position.y - other.transform.position.y>0){
+                     g.attachBall(other.gameObject,i+1,j+1);
+                }
+                else{
+                   g.attachBall(other.gameObject,i+1,j+1);
+                }
+
             }
 
 

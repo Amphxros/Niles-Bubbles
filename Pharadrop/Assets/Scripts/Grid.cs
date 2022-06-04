@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
+    
+    public BossUI bossUI;
+    public TimeUI timeUI;
+    public MovesUI movesUI;
 
     List <GameObject> currGrid;
     
@@ -78,12 +82,14 @@ public class Grid : MonoBehaviour
                     break;
                 }
 
+                grid[i,j]=g;
+               
+               
                 AttachToGridOnTrigger a= g.AddComponent<AttachToGridOnTrigger>();
                 a.setGrid(this);
                 
                 BallID b= g.GetComponent<BallID>();
 
-                grid[i,j]=g;
                 b.indX=i;
                 b.indY=j;
 
@@ -97,12 +103,26 @@ public class Grid : MonoBehaviour
         
     }
 
-    public void checkDestroyable(GameObject g){
+    public void checkDestroyable(GameObject g,int i, int j){
 
     }
 
     public void attachBall(GameObject g,int i, int j){
         
+        switch(manager.getTypeOfLevel()){
+            case LevelType.BOSS:
+            bossUI.SetBossHP(bossUI.getBossHP() - 1);
+            break;
+
+            case LevelType.TIME:
+            break;
+
+            case LevelType.MOVES:
+            movesUI.OnShoot();
+            break;
+        }
+
+
         print(i + " "+ j);
         g.transform.parent= transform;
         g.transform.position= new Vector3(-4,4,0);

@@ -28,6 +28,10 @@ public class FileManager : MonoBehaviour
     public LevelData getType(){
         return mData;
     }
+
+    public LevelType getTypeOfLevel(){
+        return mData.type;
+    }
     
     void Awake()
     {

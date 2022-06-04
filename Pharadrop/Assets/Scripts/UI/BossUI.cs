@@ -10,10 +10,14 @@ public class BossUI : MonoBehaviour
     public Transform playerPanel;
     public Transform bossPanel;
 
+    public Transform healthPlayer_;
+    public Transform healthBoss_;
+
     public Text playername;
     public Text bossName;
 
-
+    int playerHP_=-1;
+    int bossHP_=-1;
 
     public GameObject [] bossesArt;
 
@@ -74,14 +78,36 @@ public class BossUI : MonoBehaviour
         
     }
 
+    public int getPlayeHP(){
+        return playerHP_;
+    }
 
+    public int getBossHP(){
+        return bossHP_;
+    }
     public void SetPlayerHP(int hp){
         playerHP=hp;
-        //cambiar la barra de vida
+        if(playerHP_==-1){
+            playerHP_=hp; // vida max
+        }
+        else{
+
+            float result= hp/100;
+            healthPlayer_.transform.localScale= new Vector3(result,1,1);
+        }
     }
 
     public void SetBossHP(int hp){
         bossHP=hp;
+
+        if(bossHP_==-1){
+            bossHP_=hp; // vida max
+        }
+        else{
+             float result=  hp/100;
+            healthBoss_.transform.localScale= new Vector3(result,1,1);
+        }
+
          //cambiar la barra de vida
     }
 
