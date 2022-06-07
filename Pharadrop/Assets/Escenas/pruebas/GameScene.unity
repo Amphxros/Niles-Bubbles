@@ -1751,7 +1751,7 @@ MonoBehaviour:
   - {fileID: 7196448642421635605, guid: 703ebe22fa9da7a468a4f4036f7ffd8b, type: 3}
   - {fileID: 8816327178719790394, guid: 6a40af51e4b905e48a06f32696de3664, type: 3}
   initPosition: {x: -5, y: 3, z: 0}
-  filename: LevelFiles/boss_example.txt
+  filename: LevelFiles/moves_example.txt
 --- !u!114 &660426404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2413,6 +2413,7 @@ MonoBehaviour:
   bossUI: {fileID: 400276731}
   timeUI: {fileID: 1705666783}
   movesUI: {fileID: 1655266206}
+  ui_manager: {fileID: 1603011466}
   balls:
   - {fileID: 7196448642421635605, guid: 703ebe22fa9da7a468a4f4036f7ffd8b, type: 3}
   - {fileID: 2769305506231870220, guid: 474a402938286a84ba08c88c85fd939c, type: 3}

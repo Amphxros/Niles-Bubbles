@@ -9,6 +9,8 @@ public class Grid : MonoBehaviour
     public TimeUI timeUI;
     public MovesUI movesUI;
 
+    public UIManager ui_manager;
+
     List <GameObject> currGrid;
     
     Vector3 initPosition;
@@ -111,7 +113,7 @@ public class Grid : MonoBehaviour
         
         switch(manager.getTypeOfLevel()){
             case LevelType.BOSS:
-            bossUI.SetBossHP(bossUI.getBossHP() - 1);
+            bossUI.SetBossHP(bossUI.getBossHP() - 10);
             break;
 
             case LevelType.TIME:

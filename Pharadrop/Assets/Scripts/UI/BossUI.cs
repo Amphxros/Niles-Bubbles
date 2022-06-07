@@ -92,7 +92,7 @@ public class BossUI : MonoBehaviour
         }
         else{
 
-            float result= hp/100;
+            float result= (playerHP_ - playerHP)/100.0f;
             healthPlayer_.transform.localScale= new Vector3(result,1,1);
         }
     }
@@ -104,7 +104,7 @@ public class BossUI : MonoBehaviour
             bossHP_=hp; // vida max
         }
         else{
-             float result=  hp/100;
+             float result= (bossHP_ - bossHP)/100.0f;
             healthBoss_.transform.localScale= new Vector3(result,1,1);
         }
 

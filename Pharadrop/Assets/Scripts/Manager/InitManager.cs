@@ -8,7 +8,7 @@ public class InitManager : MonoBehaviour
     float time_;
     void Start()
     {
-        GoToMainMenu();
+        Invoke("GoToMainMenu",1);
     }
 
     /// <summary>
