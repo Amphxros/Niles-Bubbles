@@ -1751,7 +1751,7 @@ MonoBehaviour:
   - {fileID: 7196448642421635605, guid: 703ebe22fa9da7a468a4f4036f7ffd8b, type: 3}
   - {fileID: 8816327178719790394, guid: 6a40af51e4b905e48a06f32696de3664, type: 3}
   initPosition: {x: -5, y: 3, z: 0}
-  filename: LevelFiles/moves_example.txt
+  filename: StreamingAssets/moves_example.txt
 --- !u!114 &660426404
 MonoBehaviour:
   m_ObjectHideFlags: 0
