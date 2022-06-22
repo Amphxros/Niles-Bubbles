@@ -111,20 +111,6 @@ public class Grid : MonoBehaviour
 
     public void attachBall(GameObject g,int i, int j){
         
-        switch(manager.getTypeOfLevel()){
-            case LevelType.BOSS:
-            bossUI.SetBossHP(bossUI.getBossHP() - 10);
-            break;
-
-            case LevelType.TIME:
-            break;
-
-            case LevelType.MOVES:
-            movesUI.OnShoot();
-            break;
-        }
-
-
         print(i + " "+ j);
         g.transform.parent= transform;
         g.transform.position= new Vector3(-4,4,0);
@@ -137,7 +123,6 @@ public class Grid : MonoBehaviour
         else{
              g.transform.position+=new Vector3(j + 0.5f,-i,0);
         }
-
         grid[i,j]=g;
       
     }

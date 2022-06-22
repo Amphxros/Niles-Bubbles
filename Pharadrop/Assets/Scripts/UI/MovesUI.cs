@@ -12,6 +12,11 @@ public class MovesUI : MonoBehaviour
     public Text currScoreText;
     public Text minScoreText;
     public Text movesText;
+
+    public RectTransform characterImage;
+    public Image [] characters;
+
+
     int mMoves_=0;
 
 
@@ -24,6 +29,27 @@ public class MovesUI : MonoBehaviour
     {
         Debug.Log("Moves initialized");
     }
+
+    public void setImage(string character){
+        switch (character)
+        {
+            case "BASTET":
+            Instantiate(characters[0],characterImage.transform);
+            break;
+            
+            case "ISIS": Instantiate(characters[1],characterImage.transform);
+            break;
+
+            case "NEFTIS": Instantiate(characters[2],characterImage.transform);
+            break;
+            
+            
+            default:
+            break;
+        }
+    }
+
+
 
     public void setCurrScore(int score){
         currScore_=score;
