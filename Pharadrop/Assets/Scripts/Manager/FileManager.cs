@@ -77,8 +77,9 @@ public class FileManager : MonoBehaviour
                 
                 case "MOVES":
                 mData.type=LevelType.MOVES;
-                mData.args= int.Parse(split[1]);
-                mData.args1= split[2];
+                mData.args1=split[1];
+                mData.args2=split[2];
+                mData.args3= int.Parse(split[3]);   
                 break;
                
             }

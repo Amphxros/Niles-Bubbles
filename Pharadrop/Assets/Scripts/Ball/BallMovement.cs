@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 public class BallMovement : MonoBehaviour
 {
     public float speed;
-
+    public MMFeedbacks collision_Feedback;
     bool activated=false;
 
     void Start()
@@ -35,6 +36,7 @@ public class BallMovement : MonoBehaviour
 
       private void OnCollisionEnter2D(Collision2D other) {
         var dir= Vector3.Reflect(transform.up,other.contacts[0].normal);
+        collision_Feedback?.PlayFeedbacks();
         transform.up=dir;
     }
 }

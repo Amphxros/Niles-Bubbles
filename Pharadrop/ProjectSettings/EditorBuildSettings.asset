@@ -6,6 +6,78 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Escenas/Game/init.unity
+    guid: 28bb2f8071407434c8ee2041bf06f7e1
+  - enabled: 1
+    path: Assets/Escenas/Game/MenuPrincipal.unity
+    guid: 138c13a45296d774daaf92b6b36e7d58
+  - enabled: 1
+    path: Assets/Escenas/Game/SelectCharacter.unity
+    guid: b96ef8cec68daba488958f8253dd043f
+  - enabled: 1
+    path: Assets/Escenas/Game/BastetRoute/SelectLevelBastet.unity
+    guid: bbd9849fcab0f6441980df8d0ea13b2a
+  - enabled: 1
+    path: Assets/Escenas/Game/BastetRoute/BastetLevel0.unity
+    guid: e86fa8c3184883343b32977f0dec9e17
+  - enabled: 1
+    path: Assets/Escenas/Game/BastetRoute/BastetLevel1.unity
+    guid: 234e5e4f831a0d24ab6e10be5b7393bd
+  - enabled: 1
+    path: Assets/Escenas/Game/BastetRoute/BastetLevel2.unity
+    guid: 7c0256ae4dd2ca3498749edbfb518671
+  - enabled: 1
+    path: Assets/Escenas/Game/BastetRoute/BastetLevel3.unity
+    guid: 8e725ce31a5b2884f99ad4a7995859bb
+  - enabled: 1
+    path: Assets/Escenas/Game/BastetRoute/BastetLevel4.unity
+    guid: 121a3bb073f038f498431c777f48ac63
+  - enabled: 1
+    path: Assets/Escenas/Game/BastetRoute/BastetLevel5.unity
+    guid: 12dc9a8eccaef944f8a922432af3fb28
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/SelectLevelIsis.unity
+    guid: f9665c1a02018fd419272f27dc51f11f
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel5.unity
+    guid: a7593298ff666b845a8b3302ad33adf7
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel4.unity
+    guid: 06428456479a2c54a947245ac52a201a
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel3.unity
+    guid: 640fbb13cc4fb3f41a1c983b909c0b6c
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel2.unity
+    guid: 22ef15296919c03469b88fc7d3cf8c06
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel1.unity
+    guid: 551b71a73f53c1742807e6e58ca8d6da
+  - enabled: 1
+    path: Assets/Escenas/Game/IsisRoute/IsisLevel0.unity
+    guid: aa3aa0b6f019ccd40bbab2bcd8f29376
+  - enabled: 1
+    path: Assets/Escenas/Game/NeftisRoute/NeftisLevel0.unity
+    guid: 3e64992e1e74c6943a72af59eb760b4b
+  - enabled: 1
+    path: Assets/Escenas/Game/NeftisRoute/NeftisLevel1.unity
+    guid: f4b92023ae0d80d45bd9138e6377b4fd
+  - enabled: 1
+    path: Assets/Escenas/Game/NeftisRoute/NeftisLevel2.unity
+    guid: bbb7f2d019d68bb4cb651a82b3bec1bc
+  - enabled: 1
+    path: Assets/Escenas/Game/NeftisRoute/NeftisLevel3.unity
+    guid: 1c4ccd51976b95848ab9910eb94683b1
+  - enabled: 1
+    path: Assets/Escenas/Game/NeftisRoute/NeftisLevel4.unity
+    guid: f01b4768224ab7c44a2e74d95b9078e9
+  - enabled: 1
+    path: Assets/Escenas/Game/NeftisRoute/NeftisLevel5.unity
+    guid: 7c111b7edffa1b347ab1fceaf5203fc0
+  - enabled: 1
+    path: Assets/Escenas/Game/NeftisRoute/SelectLevelNeftis.unity
+    guid: 81cb8d6bd0da94546b7b86d898692c0b
+  - enabled: 1
     path: Assets/Escenas/pruebas/GameScene.unity
     guid: 589456d1007273f4d9dc669f918be856
   m_configObjects: {}
