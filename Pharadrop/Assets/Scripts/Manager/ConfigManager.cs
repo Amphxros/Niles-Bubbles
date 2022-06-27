@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ConfigManager : MonoBehaviour
 {
+    
 
     private Resolution currentResolution;
     private Resolution mResolution_;
