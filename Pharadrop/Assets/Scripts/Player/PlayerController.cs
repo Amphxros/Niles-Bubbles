@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         look= new Vector3(look.x,Mathf.Abs(look.y),Mathf.Abs(look.z));
         transform.up=look;
 
-        if(Input.GetMouseButtonUp(0)){
+        if(Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space)){
             pool.Activate();
         }
     }

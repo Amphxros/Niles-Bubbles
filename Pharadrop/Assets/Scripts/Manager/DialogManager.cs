@@ -134,7 +134,7 @@ public class DialogManager : MonoBehaviour
             name.text= data[i].person;
             dialog.text= data[i].dialog;
 
-            if(Input.GetKeyUp(KeyCode.Space)){
+            if(Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space)){
                 i++;
             if(i==data.Length){
                 GameManager.getInstance().ChangeScene(scene);
