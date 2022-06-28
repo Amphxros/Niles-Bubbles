@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Escenas/Game/init.unity
     guid: 28bb2f8071407434c8ee2041bf06f7e1
   - enabled: 1
+    path: Assets/Escenas/Game/IntroHistoria.unity
+    guid: e99a320e9670a1e4e9ad176245e04fba
+  - enabled: 1
     path: Assets/Escenas/Game/config.unity
     guid: e5f8f3b98e1faef42a232e1e579bfd7d
   - enabled: 1

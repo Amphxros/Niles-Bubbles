@@ -17,7 +17,7 @@ public class CreditsManager : MonoBehaviour
 
     public void plus(){
         i++;
-
+        print(i);
         if(i%2==0){
             additionalcreditsPanel.gameObject.SetActive(false);
             creditsPanel.gameObject.SetActive(true);
@@ -32,7 +32,7 @@ public class CreditsManager : MonoBehaviour
 
       public void minus(){
         i--;
-
+        print(i);
         if(i%2==0){
             additionalcreditsPanel.gameObject.SetActive(false);
             creditsPanel.gameObject.SetActive(true);
