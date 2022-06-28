@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IntroManager : MonoBehaviour
 {
+    public PapiroIntro pap;
     public GameObject[] introPanel;
     int index=0;
     void Start()
@@ -28,7 +29,7 @@ public class IntroManager : MonoBehaviour
 
     void changeByTime(){
         index++;
-
+        pap.Move();
         if(index<introPanel.Length){
  
           for(int i=0; i<introPanel.Length; i++){
