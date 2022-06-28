@@ -7,13 +7,27 @@ public class SetPositionOnClick : MonoBehaviour
     public Transform target;
     
     public Transform UIInfo;
-    /// <summary>
-    /// OnMouseDown is called when the user has pressed the mouse button while
-    /// over the GUIElement or Collider.
-    /// </summary>
+    bool isinPosition = false;
+   
+   /// <summary>
+   /// Start is called on the frame when a script is enabled just before
+   /// any of the Update methods is called the first time.
+   /// </summary>
+   void Start()
+   {
+       UIInfo.gameObject.SetActive(false);
+   }
     void OnMouseDown()
     {
-        target.transform.position = transform.position;
+        if(isinPosition){
+            UIInfo.gameObject.SetActive(true);
+            isinPosition = false;
+           
+        }
+        else{
+            target.position=transform.position;
+            isinPosition = true;
+        }
 
         
     }
