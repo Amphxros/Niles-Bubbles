@@ -49,6 +49,10 @@ public class MovesUI : MonoBehaviour
         }
     }
 
+    public void updateScore(int n){
+        currScore_+=n;
+        currScoreText.text=currScore_.ToString();
+    }
 
 
     public void setCurrScore(int score){

@@ -35,6 +35,10 @@ public class TimeUI : MonoBehaviour
         minScore= score;
     }
 
+    public void updateScore(int n){
+
+    }
+
     void Update()
     {
        if(!isTimeOver()){

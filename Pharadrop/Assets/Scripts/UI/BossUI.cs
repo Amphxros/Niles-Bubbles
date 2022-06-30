@@ -15,15 +15,18 @@ public class BossUI : MonoBehaviour
 
     public Text playername;
     public Text bossName;
+     UIManager ui;
 
     int playerHP_=-1;
     int bossHP_=-1;
+    int score=0;
 
     public GameObject [] bossesArt;
 
     void OnEnable()
     {
         Debug.Log("Boss initialized");
+        ui= GameObject.Find("UIManager").GetComponent<UIManager>();
     }
     public void setPlayer(string name){
       int i= 0;
@@ -77,6 +80,16 @@ public class BossUI : MonoBehaviour
        Instantiate(bossesArt[i], bossPanel.transform);
         
     }
+
+    public void updateScore(int n){
+        SetBossHP(getBossHP() -n);
+        score+=n;
+        if(getBossHP()<=0){
+            ui.GameWin(score,playername.text);
+        }
+    }
+
+
 
     public int getPlayeHP(){
         return playerHP_;

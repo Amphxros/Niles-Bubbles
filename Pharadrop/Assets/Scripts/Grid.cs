@@ -105,9 +105,6 @@ public class Grid : MonoBehaviour
         
     }
 
-    public void checkDestroyable(GameObject g,int i, int j){
-
-    }
 
     public void attachBall(GameObject g,int i, int j){
         
@@ -125,6 +122,56 @@ public class Grid : MonoBehaviour
         }
         grid[i,j]=g;
       
+        bool flag=false;
+
+        check(i,j);
+    }
+
+    public void check(int i, int j){
+
+        List<GameObject> rsl= new List<GameObject>();
+        List <GameObject> lst= getNeightbours(i,j);
+
+        for(int k =0; k<lst.Count; k++){
+            GameObject g= lst[k];
+            if(g!=null){
+                BallID b= g.GetComponent<BallID>();
+                if(b.mID_==grid[i,j].GetComponent<BallID>().mID_){
+                    rsl.Add(g);           
+                    for(int l=0;l<getNeightbours(b.indX,b.indY).Count;l++){
+                        GameObject g2= getNeightbours(b.indX,b.indY)[l];
+                        if(g2!=null){
+                            BallID b2= g2.GetComponent<BallID>();
+                            if(b2.mID_==grid[i,j].GetComponent<BallID>().mID_){
+                                rsl.Add(g2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        OnDestroyed(rsl.Count);
+
+        for(int k=0;k<rsl.Count;k++){
+            Destroy(rsl[k]);
+        }
+
+
+
+    }
+
+    void OnDestroyed(int n){
+        if(bossUI.gameObject.activeInHierarchy){
+            bossUI.updateScore(n);
+        }
+        else if(movesUI.gameObject.activeInHierarchy){
+            movesUI.updateScore(n);
+        }
+        else if(timeUI.gameObject.activeInHierarchy){
+            timeUI.updateScore(n);
+        }
+
+
     }
 
     public void detachBall(int i, int j){

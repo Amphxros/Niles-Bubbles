@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     private static GameManager mInstance_=null;
     public static GameManager getInstance() {  return mInstance_;}
   
-
-    private bool isBastetUnlocked= false;
+    SaveManager save;
+    
     private bool isIsisUnlocked= false;
     private bool isNeftisUnlocked= false;
     private bool[] bastetRouteLevels= {
@@ -22,14 +22,14 @@ public class GameManager : MonoBehaviour
         false
     };
     private bool[] isisRouteLevels={
-        true,
+       false,
         false,
         false,
         false,
         false
     };
     private bool[] neftisRouteLevels= {
-        true,
+        false,
         false,
         false,
         false,
@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     {   
         if(mInstance_==null){
             mInstance_=this;
+            save= new SaveManager();
+            save.Load();
             DontDestroyOnLoad(this.gameObject);
         }
         else{
@@ -53,12 +55,19 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(name);
         
     }
-    public void GameOver(){
 
-    }
-
-    public void GameWin(){
-
+    public bool isLocked(string route, int level){
+        switch (route)
+        {
+            case "BASTET":
+                return !bastetRouteLevels[level];
+            case "ISIS":
+                return !isisRouteLevels[level];
+            case "NEFTIS":
+                return !neftisRouteLevels[level];
+            default:
+                return false;
+        }
     }
 
     public void unlockLevel(string route, int level){
@@ -78,26 +87,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void ChangeSceneIfUnlocked(string name, string route, int level){
-        if(isLevelUnlocked(route, level)){
+        if(!isLocked(route,level)){
             ChangeScene(name);
         }
     }
 
 
-    public bool isLevelUnlocked (string route, int level){
-         switch(route){
-            case "Bastet":
-           return bastetRouteLevels[level];
-            break;
-
-            case "Isis":
-            return isisRouteLevels[level];
-            break;
-
-            case "Neftis":  
-           return neftisRouteLevels[level];
-            break;
-        }
-        return false;
-    }
+    
 }
